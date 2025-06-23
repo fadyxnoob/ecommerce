@@ -92,6 +92,9 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
+#posts
+Linked in posts
+
 # vuepress build output
 .vuepress/dist
 
@@ -116,5 +119,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Node
