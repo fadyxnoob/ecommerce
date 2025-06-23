@@ -93,7 +93,7 @@ dist
 # public
 
 #posts
-Linked in posts
+Linkedin-posts
 
 # vuepress build output
 .vuepress/dist
