@@ -54,13 +54,10 @@ const loginUser = asyncHandler(async (req, res) => {
             createToken(res, existingUser._id);
 
             res.status(201).json({
-                message: "You are loggedin",
-                data: {
-                    _id: existingUser._id,
-                    userName: existingUser.userName,
-                    email: existingUser.email,
-                    isAdmin: existingUser.isAdmin,
-                },
+                _id: existingUser._id,
+                userName: existingUser.userName,
+                email: existingUser.email,
+                isAdmin: existingUser.isAdmin,
             });
             return; // exit the functon after sending the response
         }
@@ -155,7 +152,7 @@ const getUserById = asyncHandler(async (req, res) => {
 
 const updateUserById = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id)
-    console.log({user})
+    console.log({ user })
     if (user) {
         user.userName = req.body.userName || user.userName
         user.email = req.body.email || user.email
